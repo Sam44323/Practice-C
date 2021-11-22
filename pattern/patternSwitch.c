@@ -57,7 +57,7 @@ int main()
   int n;
   while (n != -1)
   {
-    printf("Enter the pattern you want to print: ");
+    printf("Enter the pattern number you want to print: ");
     scanf("%d", &n);
 
     switch (n)
