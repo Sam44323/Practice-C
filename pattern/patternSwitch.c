@@ -29,9 +29,9 @@ int pattern2()
 int pattern3()
 {
   int i, j;
-  for (i = 4; i >= 1; i--)
+  for (i = 1; i < 5; i++)
   {
-    for (j = i; j >= 1; j--)
+    for (j = 4; j >= i; j--)
     {
       printf("%d", j);
     }
@@ -79,6 +79,7 @@ int main()
       break;
 
     default:
+      printf("Invalid pattern number.\n");
       break;
     }
   }
