@@ -55,28 +55,31 @@ int pattern4()
 int main()
 {
   int n;
-  printf("Enter the pattern you want to print: ");
-  scanf("%d", &n);
-
-  switch (n)
+  while (n != -1)
   {
-  case 1:
-    pattern1();
-    break;
+    printf("Enter the pattern you want to print: ");
+    scanf("%d", &n);
 
-  case 2:
-    pattern2();
-    break;
+    switch (n)
+    {
+    case 1:
+      pattern1();
+      break;
 
-  case 3:
-    pattern3();
-    break;
+    case 2:
+      pattern2();
+      break;
 
-  case 4:
-    pattern4();
-    break;
+    case 3:
+      pattern3();
+      break;
 
-  default:
-    break;
+    case 4:
+      pattern4();
+      break;
+
+    default:
+      break;
+    }
   }
 }
