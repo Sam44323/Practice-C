@@ -1,5 +1,5 @@
 # C-Practice
 
-**Some simple algorithms to practice C**
+**Some simple algorithms snippets for practicing**
 
 ---
