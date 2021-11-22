@@ -1,5 +1,5 @@
 # C-Practice
 
-**Some simple algorithms to practice C(assgn 4)**
+**Some simple algorithms to practice C**
 
 ---
