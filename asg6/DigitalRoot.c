@@ -3,7 +3,7 @@
 int main()
 {
   int num, temp, sum;
-  scanf("%d", &num);
+  scanf("Enter the number for checking: %d \n", &num);
 
   while (num > 9)
   {

@@ -1,11 +1,9 @@
+
 #include <stdio.h>
 int main()
 {
   int num1, num2, c, i, j;
 
-  /* Ask user to input the from/to range
-    * like 1 to 100, 10 to 1000 etc.
-    */
   printf("Enter the starting range:");
   scanf("%d", &num1);
 
