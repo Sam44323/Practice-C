@@ -59,6 +59,18 @@ void NonFibonacci()
   }
 }
 
+void Factorial()
+{
+  int n, i, fact = 1;
+  printf("Enter the number you want to print the factorial for: \n");
+  scanf("%d", &n);
+
+  for (i = 1; i <= n; i++)
+    fact *= i;
+
+  printf("The factorial value for %d is %d \n", n, fact);
+}
+
 int main()
 {
   int choice = 0;
@@ -81,6 +93,10 @@ int main()
 
     case 3:
       NonFibonacci();
+      break;
+
+    case 4:
+      Factorial();
       break;
 
     default:
