@@ -71,6 +71,20 @@ void Factorial()
   printf("The factorial value for %d is %d \n", n, fact);
 }
 
+int prime(int i)
+{
+  int c = 1, j;
+  for (j = 2; j <= i / 2; j++)
+  {
+    if (i % j == 0)
+    {
+      c = 0;
+      break;
+    }
+  }
+  return c;
+}
+
 void PrimeFactors()
 {
 
@@ -84,16 +98,7 @@ void PrimeFactors()
   {
     if (n % i == 0)
     {
-      c = 1;
-      for (j = 2; j <= i / 2; j++)
-      {
-        if (i % j == 0)
-        {
-          c = 0;
-          break;
-        }
-      }
-      if (c == 1)
+      if (prime(i) == 1)
       {
         printf("%d \n", i);
       }
