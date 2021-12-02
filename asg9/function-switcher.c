@@ -88,15 +88,14 @@ int prime(int i)
 void PrimeFactors()
 {
 
-  int i, j, n, c;
+  int i, j, number;
+  printf("Please Enter any number to Find Factors :  \n");
+  scanf("%d", &number);
+  printf("Factors: \n");
 
-  printf("Enter the number to find the factors for :  \n");
-  scanf("%d", &n);
-  printf("Here are the prime factors: \n");
-
-  for (i = 2; i <= n; i++)
+  for (i = 2; i <= number; i++)
   {
-    if (n % i == 0)
+    if (number % i == 0)
     {
       if (prime(i) == 1)
       {
