@@ -1,8 +1,10 @@
+
+
 #include <stdio.h>
 
 void valueDelete(int *array, int length)
 {
-  int value = 0, i = 0, index = 0;
+  int value = 0, i = 0, index = -1;
   printf("Enter the value: \n");
   scanf("%d", &value);
 
@@ -15,7 +17,7 @@ void valueDelete(int *array, int length)
     }
   }
 
-  if (index)
+  if (index > -1)
   {
     for (i = index; i < length - 1; i++)
       array[i] = array[i + 1];
