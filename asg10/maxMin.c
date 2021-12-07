@@ -12,6 +12,12 @@ int main()
     printf("%dth value enterring...:", i + 1);
     scanf("%d", &a[i]);
   }
+  if (n == 1)
+  {
+    printf("The max value is %d \n", a[0]);
+    printf("The min value is %d \n", a[0]);
+    return 0;
+  }
   int max = a[i], min = a[i];
 
   for (i = 1; i < n; i++)
@@ -24,4 +30,5 @@ int main()
 
   printf("The max value is %d \n", max);
   printf("The min value is %d \n", min);
+  return 0;
 }

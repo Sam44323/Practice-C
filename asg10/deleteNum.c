@@ -30,7 +30,7 @@ void valueDelete(int *array, int length)
 }
 void positionDelete(int *array, int length)
 {
-  int pos = 0, c = 0;
+  int pos = 0, i = 0;
   printf("Enter the position: \n");
   scanf("%d", &pos);
 
@@ -39,13 +39,13 @@ void positionDelete(int *array, int length)
     printf("Array Index out of bound!");
     return;
   }
-  for (c = pos - 1; c < length - 1; c++)
-    array[c] = array[c + 1];
+  for (i = pos - 1; i < length - 1; i++)
+    array[i] = array[i + 1];
 
   printf("Resultant array:\n");
 
-  for (c = 0; c < length - 1; c++)
-    printf("%d\n", array[c]);
+  for (i = 0; i < length - 1; i++)
+    printf("%d\n", array[i]);
 }
 
 int main()
