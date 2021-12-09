@@ -93,6 +93,35 @@ void insertDelete(int *array, int length)
   }
 }
 
+void duplicateRemoval(int *array, int length)
+{
+  int i = 0, j = 0, c = 0;
+  for (i = 0; i < length; i++)
+  {
+    for (j = i + 1; j < length; j++)
+    {
+
+      if (array[i] == array[j])
+      {
+        for (c = j; c < length - 1; c++)
+        {
+          array[c] = array[c + 1];
+        }
+        length--;
+
+        j--;
+      }
+    }
+  }
+
+  printf("New array after deletion: \n");
+
+  for (i = 0; i < length; i++)
+  {
+    printf("%d \n", array[i]);
+  }
+}
+
 int main()
 {
   int a[50], n, choice = 0, i;
@@ -129,6 +158,10 @@ int main()
 
     case 4:
       insertDelete(a, n);
+      break;
+
+    case 5:
+      duplicateRemoval(a, n);
       break;
 
     default:
