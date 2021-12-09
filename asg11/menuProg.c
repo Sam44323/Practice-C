@@ -174,6 +174,25 @@ void reverseElement(int *array, int length)
     printf("%d \n", b[i]);
 }
 
+void occurrence(int *array, int length)
+{
+  int i, search = 0, c = 0;
+
+  printf("Enter the value you want to search for: \n");
+  scanf("%d", &search);
+
+  for (i = 0; i < length; i++)
+  {
+    if (array[i] == search)
+      c++;
+  }
+
+  if (c == 0)
+    printf("No such occurrence found");
+  else
+    printf("%d occurred %d time! \n", search, c);
+}
+
 int main()
 {
   int a[50], n, choice = 0, i;
@@ -226,6 +245,10 @@ int main()
 
     case 8:
       reverseElement(a, n);
+      break;
+
+    case 9:
+      occurrence(a, n);
       break;
 
     default:
