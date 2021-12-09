@@ -157,7 +157,21 @@ void ascDescSort(int *array, int length)
   printf("Sorted list in ascending order:\n");
 
   for (i = 0; i < length; i++)
-    printf("%d\n", array[i]);
+    printf("%d \n", array[i]);
+}
+
+void reverseElement(int *array, int length)
+{
+  int i = 0, b[50], c = 0;
+
+  for (i = length - 1; i >= 0; i--)
+  {
+    b[c++] = array[i];
+  }
+
+  printf("Reversed array: \n");
+  for (i = 0; i < length; i++)
+    printf("%d \n", b[i]);
 }
 
 int main()
@@ -208,6 +222,10 @@ int main()
 
     case 7:
       ascDescSort(a, n);
+      break;
+
+    case 8:
+      reverseElement(a, n);
       break;
 
     default:
