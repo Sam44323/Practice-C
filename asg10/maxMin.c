@@ -4,7 +4,7 @@
 
 int main()
 {
-  int i, n, a[50];
+  int min = 0, max = 0, arr[50], n = 0, i;
 
   printf("Enter the count of numbers you want to store: \n");
 
@@ -12,25 +12,31 @@ int main()
   for (i = 0; i < n; i++)
   {
     printf("%dth value enterring...:", i + 1);
-    scanf("%d", &a[i]);
+    scanf("%d", &arr[i]);
   }
+
   if (n == 1)
   {
-    printf("The max value is %d \n", a[0]);
-    printf("The min value is %d \n", a[0]);
-    return 0;
+    min = max = arr[0];
   }
-  int max = a[i], min = a[i];
-
-  for (i = 1; i < n; i++)
+  /* If there are more than one elements, then initialize min and max*/
+  if (arr[0] > arr[1])
   {
-    if (a[i] > max)
-      max = a[i];
-    else if (a[i] < min)
-      min = a[i];
+    max = arr[0];
+    min = arr[1];
   }
-
-  printf("The max value is %d \n", max);
-  printf("The min value is %d \n", min);
-  return 0;
+  else
+  {
+    max = arr[1];
+    min = arr[0];
+  }
+  for (int i = 2; i < n; i++)
+  {
+    if (arr[i] > max)
+      max = arr[i];
+    else if (arr[i] < min)
+      min = arr[i];
+  }
+  printf("Maximum value: %d \n", max);
+  printf("Minimum value: %d \n", min);
 }
