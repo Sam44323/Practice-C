@@ -1,3 +1,5 @@
+
+
 #include <stdio.h>
 
 void evenOdd(int *array, int length)
@@ -19,8 +21,8 @@ void sumAverage(int *array, int length)
   {
     sum += array[i];
   }
-  printf("Sum: %d", sum);
-  printf("Average: %d", sum / length);
+  printf("Sum: %d \n", sum);
+  printf("Average: %d \n", sum / length);
 }
 
 void maxmin(int *array, int length)
