@@ -145,7 +145,7 @@ void ascDescSort(int *array, int length)
     for (j = 0; j < length - i - 1; j++)
     {
       printf("%d", j);
-      if (array[j] > array[j + 1])
+      if (choice == 1 ? array[j] > array[j + 1] : array[j] < array[j + 1])
       {
         temp = array[j];
         array[j] = array[j + 1];
