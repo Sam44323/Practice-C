@@ -23,6 +23,35 @@ void sumAverage(int *array, int length)
   printf("Average: %d", sum / length);
 }
 
+void maxmin(int *array, int length)
+{
+  int i = 0, sum = 0, max = 0, min = 0;
+  if (length == 1)
+  {
+    min = max = array[0];
+  }
+
+  if (array[0] > array[1])
+  {
+    max = array[0];
+    min = array[1];
+  }
+  else
+  {
+    max = array[1];
+    min = array[0];
+  }
+  for (int i = 2; i < length; i++)
+  {
+    if (array[i] > max)
+      max = array[i];
+    else if (array[i] < min)
+      min = array[i];
+  }
+  printf("Maximum value: %d \n", max);
+  printf("Minimum value: %d \n", min);
+}
+
 int main()
 {
   int a[50], n, choice = 0, i;
@@ -46,6 +75,14 @@ int main()
     {
     case 1:
       evenOdd(a, n);
+      break;
+
+    case 2:
+      sumAverage(a, n);
+      break;
+
+    case 3:
+      maxmin(a, n);
       break;
 
     default:
