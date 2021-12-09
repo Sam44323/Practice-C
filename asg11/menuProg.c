@@ -122,6 +122,44 @@ void duplicateRemoval(int *array, int length)
   }
 }
 
+void reverseOrderPrint(int *array, int length)
+{
+  int i;
+  printf("Array in reverse order \n");
+  for (i = length - 1; i >= 0; i--)
+  {
+    printf("%d \n", array[i]);
+  }
+}
+
+void ascDescSort(int *array, int length)
+{
+  int i, temp = 0, j, choice;
+
+  printf("Enter 1 for Ascending and 2 for Descending \n");
+  scanf("%d \n", &choice);
+
+  for (i = 0; i < length - 1; i++)
+  {
+    printf("%d", i);
+    for (j = 0; j < length - i - 1; j++)
+    {
+      printf("%d", j);
+      if (array[j] > array[j + 1])
+      {
+        temp = array[j];
+        array[j] = array[j + 1];
+        array[j + 1] = temp;
+      }
+    }
+  }
+
+  printf("Sorted list in ascending order:\n");
+
+  for (i = 0; i < length; i++)
+    printf("%d\n", array[i]);
+}
+
 int main()
 {
   int a[50], n, choice = 0, i;
@@ -162,6 +200,14 @@ int main()
 
     case 5:
       duplicateRemoval(a, n);
+      break;
+
+    case 6:
+      reverseOrderPrint(a, n);
+      break;
+
+    case 7:
+      ascDescSort(a, n);
       break;
 
     default:
