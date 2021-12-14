@@ -2,6 +2,7 @@
 
 int main()
 {
+
   int mat1[100][100], mat2[100][100], sum[100][100], rows, cols, i = 0, j = 0;
   printf("Enter the row count: ");
   scanf("%d", &rows);
