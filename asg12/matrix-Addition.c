@@ -1,3 +1,5 @@
+
+
 #include <stdio.h>
 
 int main()
@@ -26,6 +28,22 @@ int main()
       printf("Enter element at %d and %d position: ", i + 1, j + 1);
       scanf("%d", &mat2[i][j]);
     }
+
+  printf("The entered first matrix is: \n");
+  for (i = 0; i < rows; i++)
+  {
+    for (j = 0; j < cols; j++)
+      printf("%d \t", mat1[i][j]);
+    printf("\n");
+  }
+
+  printf("The entered second matrix is: \n");
+  for (i = 0; i < rows; i++)
+  {
+    for (j = 0; j < cols; j++)
+      printf("%d \t", mat2[i][j]);
+    printf("\n");
+  }
 
   for (i = 0; i < rows; ++i)
     for (j = 0; j < cols; ++j)

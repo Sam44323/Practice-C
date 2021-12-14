@@ -5,7 +5,8 @@ int main()
   int mat1[100][100], mat2[100][100], multiply[100][100], sum, rows1, cols1, rows2, cols2, i = 0, j = 0, k = 0;
 
   printf("Enter the number of rows and columns of first matrix \n");
-  scanf("%d%d", &rows1, &cols1);
+  scanf("%d %d", &rows1, &cols1);
+  printf("\n");
   printf("Enter the elements of first matrix \n");
 
   for (i = 0; i < rows1; i++)
@@ -13,12 +14,12 @@ int main()
       scanf("%d", &mat1[i][j]);
 
   printf("Enter the number of rows and columns of second matrix \n");
-  scanf("%d%d", &rows2, &cols2);
+  scanf("%d %d", &rows2, &cols2);
+  printf("\n");
 
   if (cols1 != rows2)
   {
     printf("The given order matrices can't be multiplicated. Please retry!.\n");
-    return -1;
   }
   else
   {
