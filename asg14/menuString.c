@@ -55,7 +55,7 @@ int main()
     printf("Please enter your choice! \n");
     scanf("%d", &choice);
 
-    fflush(stdin);
+    fflush(stdin); // removing the buffer
 
     switch (choice)
     {
