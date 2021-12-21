@@ -19,8 +19,31 @@ void lower()
 
 void string_compare()
 {
-  char str1[50], str2[50];
-  int i = 0;
+  char str1[100], str2[100];
+  int i = 0, count = 0;
+
+  printf("\nEnter first strings :");
+  gets(str1);
+  printf("\nEnter second strings :");
+  gets(str2);
+  printf("\n");
+
+  while (str1[i] == str2[i] && str1[i] != '\0')
+  {
+    i++;
+    if (str1[i] > str2[i])
+      count = 1;
+    else if (str1[i] < str2[i])
+      count = -1;
+  }
+  if (count == 0)
+  {
+    printf("Both strings are equal!");
+  }
+  else
+  {
+    printf("Not Equal!");
+  }
 }
 
 int main()
