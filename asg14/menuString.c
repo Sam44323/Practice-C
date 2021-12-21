@@ -46,6 +46,26 @@ void string_compare()
   }
 }
 
+void string_copy()
+{
+  char str1[100], str2[100];
+  int i = 0;
+
+  printf("\nEnter first strings :");
+  gets(str1);
+  printf("\nEnter second strings :");
+  gets(str2);
+  printf("\n");
+
+  while (str1[i] != '\0')
+  {
+    str2[i] = str1[i];
+    i++;
+  }
+
+  printf("Copied String:  %s \n\n", str1);
+}
+
 int main()
 {
   int choice = 0;
@@ -65,6 +85,10 @@ int main()
 
     case 2:
       string_compare();
+      break;
+
+    case 3:
+      string_copy();
       break;
 
     default:
