@@ -16,16 +16,18 @@ int main()
   int i, index = 0, max_value = 0;
   char max_word[100];
 
-  char array[3][100];
+  char array[10][100];
 
-  for (i = 0; i < 3; i++)
+  printf("Enter your words!");
+
+  for (i = 0; i < 10; i++)
     scanf("%s", array[i]);
 
   printf("Original string orders: \n");
-  for (i = 0; i < 3; i++)
+  for (i = 0; i < 10; i++)
     printf("%s\n", array[i]);
 
-  for (i = 0; i < 3; i++)
+  for (i = 0; i < 10; i++)
   {
     if (string_length(array[i]) > max_value)
     {
