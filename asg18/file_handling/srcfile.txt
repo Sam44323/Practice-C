@@ -1,0 +1,1 @@
+suranjanduttamoitra@Suranjans-Air file_handling % cd "/Users/suranjanduttamoitra/Dropbox/My Mac (Suranjan’s MacBook Air)/Documents/personal-projs/Practice-C/asg18/file_handling/" && gcc copy_contents.c -o copy_contents && "/Users/suranjanduttamoitra/Dropbox/My Mac (Suranjan’s MacBook Air)/Documents/personal-projs/Practice-C/asg18/file_handling/"copy_contents
