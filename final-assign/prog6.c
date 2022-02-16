@@ -33,7 +33,7 @@ void sine_series()
       sum = sum - pow(x, j) / fac(j);
   }
 
-  printf("Sin(%0.1f): %f", Q, sum);
+  printf("Sin(%0.5f): %f", Q, sum);
 }
 
 void cosine_series()
