@@ -17,7 +17,7 @@ void pattern_b(int n)
 {
   int c = 1, gap, i, j;
 
-  printf("Here is your pattern: \n");
+  printf("Here is your pattern with range: \n");
   for (i = 0; i < n; i++)
   {
     for (gap = 1; gap <= n - i; gap++)
