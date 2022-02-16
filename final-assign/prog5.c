@@ -93,7 +93,7 @@ int main()
       break;
 
     default:
-      printf("Invalid Choice!");
+      printf("Invalid Choice! \n");
       break;
     }
   }
