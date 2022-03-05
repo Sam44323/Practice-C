@@ -52,6 +52,7 @@ void insertionDeletionFromArray(int *arr, int size)
   {
     for (i = pos - 1; i < size - 1; i++)
       arr[i] = arr[i + 1];
+
     printf("Array after deletion: ");
     for (i = 0; i < size; i++)
       printf("%d ", arr[i]);
