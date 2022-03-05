@@ -71,6 +71,33 @@ void product(int a[SIZE][SIZE], int b[SIZE][SIZE], int r, int c)
 
 void transpose(int a[SIZE][SIZE], int b[SIZE][SIZE], int r, int c)
 {
+  int convertedMatrix[SIZE][SIZE], i = 0, j = 0;
+  for (i = 0; i < r; ++i)
+    for (j = 0; j < c; ++j)
+    {
+      convertedMatrix[j][i] = a[i][j];
+    }
+  printf("\nTranspose of the first matrix:\n");
+  for (int i = 0; i < c; ++i)
+    for (int j = 0; j < r; ++j)
+    {
+      printf("%d  ", convertedMatrix[i][j]);
+      if (j == r - 1)
+        printf("\n");
+    }
+  for (i = 0; i < r; ++i)
+    for (j = 0; j < c; ++j)
+    {
+      convertedMatrix[j][i] = b[i][j];
+    }
+  printf("\nTranspose of the second matrix:\n");
+  for (int i = 0; i < c; ++i)
+    for (int j = 0; j < r; ++j)
+    {
+      printf("%d  ", convertedMatrix[i][j]);
+      if (j == r - 1)
+        printf("\n");
+    }
 }
 
 int main()
