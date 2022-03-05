@@ -100,7 +100,18 @@ void wordCount(char *string)
   printf("Word-count for the given string: %d \n", wordCount);
 }
 
-void vowelCount(char *string) {}
+void vowelCount(char *string)
+{
+  int vowelCount = 0, i = 0;
+
+  for (i = 0; string[i] != '\0'; i++)
+  {
+    if (string[i] == 'a' || string[i] == 'A' || string[i] == 'e' || string[i] == 'E' || string[i] == 'i' || string[i] == 'I' || string[i] == 'o' || string[i] == 'O' || string[i] == 'u' || string[i] == 'U')
+      vowelCount++;
+  }
+
+  printf("Word-count for the given string: %d \n", vowelCount);
+}
 
 int main()
 {
