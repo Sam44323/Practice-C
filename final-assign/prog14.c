@@ -1,7 +1,7 @@
 #include <stdio.h>
 #define SIZE 100
 
-void addressPrint(char *string[SIZE])
+void addressPrint(char *string)
 {
   int i = 0;
   while (string[i] != NULL)
@@ -11,7 +11,7 @@ void addressPrint(char *string[SIZE])
   }
 }
 
-void length(char *string[SIZE])
+void length(char *string)
 {
   int i = 0;
   while (string[i] != NULL)
@@ -21,7 +21,7 @@ void length(char *string[SIZE])
   printf("Length of string: %d\n", i);
 }
 
-void caseConversion(char *string[SIZE])
+void caseConversion(char *string)
 {
   int i = 0;
   while (string[i] != NULL)
@@ -34,15 +34,30 @@ void caseConversion(char *string[SIZE])
   printf("Case conversed string: %s", string);
 }
 
-void reversing(char *string[SIZE]) {}
+void reversing(char *string)
+{
+  int i, len, temp;
+  while (string[len] != NULL)
+  {
+    len++;
+  }
+  for (i = 0; i < len / 2; i++)
+  {
+    temp = string[i];
+    string[i] = string[len - i - 1];
+    string[len - i - 1] = temp;
+  }
 
-void compare(char *string[SIZE]) {}
+  printf("Reversed string: %s", string);
+}
 
-void stringCopy(char *string[SIZE]) {}
+void compare(char *string) {}
 
-void wordCount(char *string[SIZE]) {}
+void stringCopy(char *string) {}
 
-void vowelCount(char *string[SIZE]) {}
+void wordCount(char *string) {}
+
+void vowelCount(char *string) {}
 
 int main()
 {
