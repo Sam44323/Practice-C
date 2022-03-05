@@ -162,7 +162,39 @@ void reverseArray(int *arr, int size)
     printf("%d ", arr[i]);
 }
 
-void frequencyCalculation(int *arr, int size) {}
+void frequencyCalculation(int *arr, int size)
+{
+  int freq[size], j = 0, i = 0, count = 0;
+  for (i = 0; i < size; i++)
+    freq[i] = -1;
+
+  for (i = 0; i < size; i++)
+  {
+    count = 1;
+    for (j = i + 1; j < size; j++)
+    {
+      if (arr[i] == arr[j])
+      {
+        count++;
+
+        freq[j] = 0;
+      }
+    }
+
+    if (freq[i] != 0)
+      freq[i] = count;
+  }
+
+  printf("Frequency of elements : \n");
+  for (i = 0; i < size; i++)
+  {
+    if (freq[i] != 0)
+    {
+      printf("%d occurs", arr[i]);
+      printf("%d times", freq[i]);
+    }
+  }
+}
 
 int main()
 {
