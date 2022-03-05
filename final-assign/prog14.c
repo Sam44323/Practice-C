@@ -51,7 +51,28 @@ void reversing(char *string)
   printf("Reversed string: %s", string);
 }
 
-void compare(char *string) {}
+void compare(char *string)
+{
+  char secondString[SIZE];
+  printf("Enter a string to compare: ");
+  scanf("%s \n", secondString);
+
+  int counter = 0, i = 0;
+  while (string[i] != '\0' && secondString[i] != '\0')
+  {
+    if (string[i] != secondString[i])
+    {
+      counter = 1;
+      break;
+    }
+    i++;
+  }
+
+  if (counter == 0)
+    printf("Strings are equal\n");
+  else
+    printf("Strings are not equal\n");
+}
 
 void stringCopy(char *string) {}
 
