@@ -89,7 +89,63 @@ void removeDuplicates(int *arr, int size)
   printf("\n");
 }
 
-void sortingAscDesc(int *arr, int size) {}
+void sortingAscDesc(int *arr, int size)
+{
+  int i = 0, j = 0, temp = 0, choice = 0;
+
+  printf("1: Ascending | 2: Descending\n");
+  printf("Enter your choice: ");
+  scanf("%d \n", &choice);
+
+  if (choice == 1)
+  {
+    for (i = 0; i < size; ++i)
+    {
+
+      for (j = i + 1; j < size; ++j)
+      {
+
+        if (arr[i] > arr[j])
+        {
+
+          temp = arr[i];
+          arr[i] = arr[j];
+          arr[j] = temp;
+        }
+      }
+    }
+
+    printf("Array after sorting in ascending: ");
+    for (i = 0; i < size; i++)
+      printf("%d ", arr[i]);
+  }
+  else if (choice == 2)
+  {
+    for (i = 0; i < size; ++i)
+    {
+
+      for (j = i + 1; j < size; ++j)
+      {
+
+        if (arr[i] < arr[j])
+        {
+
+          temp = arr[i];
+          arr[i] = arr[j];
+          arr[j] = temp;
+        }
+      }
+    }
+
+    printf("Array after sorting in descending: ");
+    for (i = 0; i < size; i++)
+      printf("%d ", arr[i]);
+  }
+  else
+  {
+    printf("Invalid choice\n");
+  }
+}
 
 void reverseArray(int *arr, int size) {}
 
