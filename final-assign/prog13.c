@@ -45,6 +45,28 @@ void difference(int a[SIZE][SIZE], int b[SIZE][SIZE], int r, int c)
 
 void product(int a[SIZE][SIZE], int b[SIZE][SIZE], int r, int c)
 {
+  int i = 0, j = 0, k = 0, mul[SIZE][SIZE];
+  for (i = 0; i < r; i++)
+  {
+    for (j = 0; j < c; j++)
+    {
+      mul[i][j] = 0;
+      for (k = 0; k < c; k++)
+      {
+        mul[i][j] += a[i][k] * b[k][j];
+      }
+    }
+  }
+
+  printf("Product of two matrices: \n");
+  for (i = 0; i < r; i++)
+  {
+    for (j = 0; j < c; j++)
+    {
+      printf("%d\t", mul[i][j]);
+    }
+    printf("\n");
+  }
 }
 
 void transpose(int a[SIZE][SIZE], int b[SIZE][SIZE], int r, int c)
