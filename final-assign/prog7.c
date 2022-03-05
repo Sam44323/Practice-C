@@ -42,6 +42,7 @@ int main()
   {
     printf("1. Pattern 1 | 2. Pattern 2 \n");
     printf("Enter your choice! \n");
+    scanf("%d", &choice);
 
     printf("Enter the range limit: \n");
     printf("%d", &range);
