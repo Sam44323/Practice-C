@@ -14,7 +14,6 @@ int countOccurrences(FILE *fptr, const char *word)
   while ((fgets(str, SIZE, fptr)) != NULL)
   {
     index = 0;
-
     while ((pos = strstr(str + index, word)) != NULL)
     {
       index = (pos - str) + 1;
