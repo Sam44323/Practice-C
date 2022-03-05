@@ -11,9 +11,28 @@ void addressPrint(char *string[SIZE])
   }
 }
 
-void length(char *string[SIZE]) {}
+void length(char *string[SIZE])
+{
+  int i = 0;
+  while (string[i] != NULL)
+  {
+    i++;
+  }
+  printf("Length of string: %d\n", i);
+}
 
-void caseConversion(char *string[SIZE]) {}
+void caseConversion(char *string[SIZE])
+{
+  int i = 0;
+  while (string[i] != NULL)
+  {
+    if (string[i] >= 65 && string[i] <= 90)
+      string[i] = string[i] + 32;
+    i++;
+  }
+
+  printf("Case conversed string: %s", string);
+}
 
 void reversing(char *string[SIZE]) {}
 
