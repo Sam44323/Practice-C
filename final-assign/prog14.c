@@ -88,7 +88,17 @@ void stringCopy(char *string)
   return 0;
 }
 
-void wordCount(char *string) {}
+void wordCount(char *string)
+{
+  int wordCount = 0, i = 0;
+  for (i = 0; string[i] != '\0'; i++)
+  {
+    if (string[i] == ' ' && string[i + 1] != ' ')
+      wordCount++;
+  }
+
+  printf("Word-count for the given string: %d \n", wordCount);
+}
 
 void vowelCount(char *string) {}
 
