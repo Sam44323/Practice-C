@@ -74,7 +74,19 @@ void compare(char *string)
     printf("Strings are not equal\n");
 }
 
-void stringCopy(char *string) {}
+void stringCopy(char *string)
+{
+  char copiedString[SIZE];
+  int i = 0;
+
+  for (i = 0; string[i] != '\0'; ++i)
+  {
+    copiedString[i] = string[i];
+  }
+  copiedString[i] = '\0';
+  printf("Copied String: %s", copiedString);
+  return 0;
+}
 
 void wordCount(char *string) {}
 
