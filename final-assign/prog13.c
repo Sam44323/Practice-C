@@ -22,15 +22,32 @@ void summation(int a[SIZE][SIZE], int b[SIZE][SIZE], int r, int c)
     }
 }
 
-void difference(int *a, int *b, int r, int c)
+void difference(int a[SIZE][SIZE], int b[SIZE][SIZE], int r, int c)
+{
+  int i = 0, j = 0, diff[r][c];
+  for (i = 0; i < r; ++i)
+    for (j = 0; j < c; ++j)
+    {
+      diff[i][j] = a[i][j] - b[i][j];
+    }
+
+  printf("Difference of two matrices: \n");
+  for (i = 0; i < r; ++i)
+    for (j = 0; j < c; ++j)
+    {
+      printf("%d\t", diff[i][j]);
+      if (j == c - 1)
+      {
+        printf("\n\n");
+      }
+    }
+}
+
+void product(int a[SIZE][SIZE], int b[SIZE][SIZE], int r, int c)
 {
 }
 
-void product(int *a, int *b, int r, int c)
-{
-}
-
-void transpose(int *a, int *b, int r, int c)
+void transpose(int a[SIZE][SIZE], int b[SIZE][SIZE], int r, int c)
 {
 }
 
