@@ -1,21 +1,53 @@
 #include <stdio.h>
 #include <stdlib.h>
+#define SIZE 100
+
+int countOccurrences(FILE *fptr, const char *word)
+{
+  char str[SIZE];
+  char *pos;
+
+  int index, count;
+
+  count = 0;
+
+  while ((fgets(str, SIZE, fptr)) != NULL)
+  {
+    index = 0;
+
+    while ((pos = strstr(str + index, word)) != NULL)
+    {
+      index = (pos - str) + 1;
+      count++;
+    }
+  }
+
+  return count;
+}
 
 int main()
 {
-  char ch;
-
   FILE *fptr;
+  char *word;
+  int i = 0;
 
-  fptr = fopen("paragraph.txt", "w");
-  printf("\nEnter text to write (press < enter > to save & quit):\n");
-  while ((ch = getchar()) != '\n')
+  word = malloc(25 * sizeof(char));
+  fptr = fopen("paragraph.txt", "r");
+
+  if (!fptr)
+    printf("File not found. \n");
+
+  else
   {
-    putc(ch, fptr);
+    printf("Word: ");
+    scanf("%s", word);
+    i = countOccurrences(fptr, word);
   }
+  if (i == 0)
+    printf("Word not found!\n");
+  else
+    printf("Word found %d times!\n", i);
 
-  printf("Paragraph written successfully.");
   fclose(fptr);
-
   return 0;
 }
