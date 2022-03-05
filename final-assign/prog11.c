@@ -64,7 +64,30 @@ void insertionDeletionFromArray(int *arr, int size)
   }
 }
 
-void removeDuplicates(int *arr, int size) {}
+void removeDuplicates(int *arr, int size)
+{
+  int i = 0, j = 0, k = 0;
+  for (i = 0; i < size; i++)
+  {
+    for (j = i + 1; j < size; j++)
+    {
+      if (arr[i] == arr[j])
+      {
+        for (k = j; k < size; k++)
+        {
+          arr[k] = arr[k + 1];
+        }
+        j--;
+        size--;
+      }
+    }
+  }
+
+  printf("Array after duplicates removal: ");
+  for (i = 0; i < size; i++)
+    printf("%d ", arr[i]);
+  printf("\n");
+}
 
 void sortingAscDesc(int *arr, int size) {}
 
