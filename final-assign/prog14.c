@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #define SIZE 100
 
@@ -55,7 +56,7 @@ void compare(char *string)
 {
   char secondString[SIZE];
   printf("Enter a string to compare: ");
-  scanf("%s \n", secondString);
+  scanf("%ss", secondString);
 
   int counter = 0, i = 0;
   while (string[i] != '\0' && secondString[i] != '\0')
@@ -126,7 +127,7 @@ int main()
     puts(word);
     printf("\n 1: Address of characters | 2: String length | 3: Uppercase to lowercase | 4: Reverse | 5: String Compare | 6: String Copy | 7: Word Count | 8: Vowel Count | -1: Exit \n");
     printf("Enter your choice \n");
-    scanf("%d \n", &choice);
+    scanf("%d", &choice);
 
     switch (choice)
     {

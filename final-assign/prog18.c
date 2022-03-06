@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 #define SIZE 100
@@ -11,10 +12,10 @@ int countOccurrences(FILE *fptr, const char *word)
 
   count = 0;
 
-  while ((fgets(str, SIZE, fptr)) != NULL)
+  while ((fgets(str, SIZE, fptr)) != '\0')
   {
     index = 0;
-    while ((pos = strstr(str + index, word)) != NULL)
+    while ((pos = strstr(str + index, word)) != '\0')
     {
       index = (pos - str) + 1;
       count++;

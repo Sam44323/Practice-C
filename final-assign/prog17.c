@@ -39,7 +39,7 @@ int main()
     printf("Enter first name: \n");
     scanf("%s \n", s[i].firstName);
     printf("Enter roll number: \n");
-    scanf("%d \n", &s[i].roll);
+    scanf("%d", &s[i].roll);
     printf("Enter marks: \n");
     scanf("%f \n", &s[i].marks);
   }

@@ -139,7 +139,7 @@ void ascDescSort(int *array, int length)
   int i, temp = 0, j, choice;
 
   printf("Enter 1 for Ascending and 2 for Descending \n");
-  scanf("%d \n", &choice);
+  scanf("%d", &choice);
 
   for (i = 0; i < length - 1; i++)
   {

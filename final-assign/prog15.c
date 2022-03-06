@@ -6,7 +6,7 @@
 char *replaceWord(const char *s, const char *oldW, const char *newW)
 {
   char *result;
-  int i, cnt = 0;
+  int i, count = 0;
   int newWlen = strlen(newW);
   int oldWlen = strlen(oldW);
 
@@ -14,13 +14,13 @@ char *replaceWord(const char *s, const char *oldW, const char *newW)
   {
     if (strstr(&s[i], oldW) == &s[i])
     {
-      cnt++;
+      count++;
 
       i += oldWlen - 1;
     }
   }
 
-  result = (char *)malloc(i + cnt * (newWlen - oldWlen) + 1);
+  result = (char *)malloc(i + count * (newWlen - oldWlen) + 1);
 
   i = 0;
   while (*s)

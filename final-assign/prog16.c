@@ -2,30 +2,36 @@
 #define SIZE 100
 
 int main()
-
 {
 
-  char str[SIZE];
-  int i = 0, j = 0, len = 0;
+  char string[20];
+  printf("Enter your full-name \n");
+  fgets(string, sizeof(string), stdin);
+  puts(string);
 
-  printf("Enter a string: ");
-  fgets(str, sizeof(str), stdin);
-  printf("Entered string: ");
-  puts(str);
+  int i = 0, j = 0;
 
-  len = strlen(str);
-
-  for (i = 0; i <= 13; i++)
+  while (string[i] != '\0')
   {
-    if (str[i] == ' ')
+
+    if (string[i] == 32 && j < 1)
     {
-      for (j = i; j < len; j++)
+      printf("%c.", string[i + 1]);
+      j++;
+    }
+
+    else if (i == 0)
+      printf("%c.", string[0]);
+
+    else if (string[i] == 32)
+    {
+      while (string[i] != '\0')
       {
-        putchar(str[j]);
+        printf("%c", string[i + 1]);
+        i++;
       }
     }
+
     i++;
   }
-
-  return 0;
 }

@@ -27,16 +27,16 @@ void insertionDeletionFromArray(int *arr, int size)
 
   printf("1. Insert | 2. Delete\n");
   printf("Enter your choice: ");
-  scanf("%d \n", &choice);
+  scanf("%d", &choice);
   printf("Enter the position where you'd like to insert/delete: ");
-  scanf("%d \n", &pos);
+  scanf("%d", &pos);
   if (pos > size + 1)
   {
     printf("Invalid position\n");
     return;
   }
   printf("Enter the value: ");
-  scanf("%d \n", &value);
+  scanf("%d", &value);
 
   if (choice == 1)
   {
@@ -95,7 +95,7 @@ void sortingAscDesc(int *arr, int size)
 
   printf("1: Ascending | 2: Descending\n");
   printf("Enter your choice: ");
-  scanf("%d \n", &choice);
+  scanf("%d", &choice);
 
   if (choice == 1)
   {
@@ -201,7 +201,7 @@ int main()
   int arr[SIZE], choice = 0, size = 0;
 
   printf("Enter the size of the array: ");
-  scanf("%d \n", &size);
+  scanf("%d", &size);
 
   if (size > SIZE)
   {
@@ -219,7 +219,7 @@ int main()
   {
     printf("1. Max and Min | 2. Insertion and Deletion | 3. Remove Duplicates | 4. Sort Ascending and Descending | 5. Reverse Array | 6. Frequency Calculation\n | -1. Exit\n");
     printf("Enter your choice: \n");
-    scanf("%d \n", &choice);
+    scanf("%d", &choice);
 
     switch (choice)
     {
