@@ -13,12 +13,10 @@ void lineCalculator()
   c = getc(fptr);
   while (c != EOF)
   {
-
     if (c == 'n')
     {
       lines = lines + 1;
     }
-
     c = getc(fptr);
   }
   fclose(fptr);
