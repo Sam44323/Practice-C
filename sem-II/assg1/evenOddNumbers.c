@@ -1,8 +1,9 @@
+
 #include <stdio.h>
 int main()
 {
 
-  int array[100], i, num;
+  int array[100], i, num, oddSum = 0, evenSum = 0;
   printf("Enter the size of an array \n");
 
   scanf("%d", &num);
@@ -13,23 +14,20 @@ int main()
     scanf("%d", &array[i]);
   }
 
-  printf("Even numbers in the array are: ");
   for (i = 0; i < num; i++)
   {
     if (array[i] % 2 == 0)
     {
-      printf("%d \t", array[i]);
+      evenSum = evenSum + array[i];
+    }
+    else
+    {
+      oddSum = oddSum + array[i];
     }
   }
 
-  printf("\n Odd numbers in the array are: ");
-  for (i = 0; i < num; i++)
-  {
-    if (array[i] % 2 != 0)
-    {
-      printf("%d \t", array[i]);
-    }
-  }
+  printf("The sum of odd numbers is %d \n", oddSum);
+  printf("The sum of even numbers is %d \n", evenSum);
 
   return 0;
 }

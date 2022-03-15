@@ -1,6 +1,7 @@
+
 #include <stdio.h>
 
-void main()
+int main()
 {
   int n, i, sum;
   int min, max;
