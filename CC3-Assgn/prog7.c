@@ -43,13 +43,15 @@ void MoveNode(struct Node **destRef, struct Node **sourceRef)
 {
 
   struct Node *newNode = *sourceRef;
-  assert(newNode != NULL);
+  if (newNode != NULL)
+  {
 
-  *sourceRef = newNode->next;
+    *sourceRef = newNode->next;
 
-  newNode->next = *destRef;
+    newNode->next = *destRef;
 
-  *destRef = newNode;
+    *destRef = newNode;
+  }
 }
 
 void push(struct Node **head_ref, int new_data)
