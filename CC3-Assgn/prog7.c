@@ -10,6 +10,21 @@ struct Node
 
 void MoveNode(struct Node **destRef, struct Node **sourceRef);
 
+void MoveNode(struct Node **destRef, struct Node **sourceRef)
+{
+
+  struct Node *newNode = *sourceRef;
+  if (newNode != NULL)
+  {
+
+    *sourceRef = newNode->next;
+
+    newNode->next = *destRef;
+
+    *destRef = newNode;
+  }
+}
+
 struct Node *SortMergeLL(struct Node *a, struct Node *b)
 {
   struct Node dummy;
@@ -37,21 +52,6 @@ struct Node *SortMergeLL(struct Node *a, struct Node *b)
     tail = tail->next;
   }
   return (dummy.next);
-}
-
-void MoveNode(struct Node **destRef, struct Node **sourceRef)
-{
-
-  struct Node *newNode = *sourceRef;
-  if (newNode != NULL)
-  {
-
-    *sourceRef = newNode->next;
-
-    newNode->next = *destRef;
-
-    *destRef = newNode;
-  }
 }
 
 void push(struct Node **head_ref, int new_data)
