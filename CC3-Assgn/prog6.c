@@ -15,7 +15,7 @@ void create()
   if (temp == NULL)
   {
     printf("Underflow: \n");
-    exit(0);
+    return;
   }
   printf("Enter the data value for the node: \t");
   scanf("%d", &temp->info);
