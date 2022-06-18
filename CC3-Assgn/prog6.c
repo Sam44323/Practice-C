@@ -98,7 +98,7 @@ void delete_pos()
   if (start == NULL)
   {
     printf("The List is Empty \n");
-    exit(0);
+    return;
   }
   else
   {
