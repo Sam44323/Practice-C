@@ -94,6 +94,7 @@ int main()
       display();
       break;
     case -1:
+      exit(0);
       break;
     default:
       printf("Invalid choice\n");
