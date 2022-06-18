@@ -47,7 +47,7 @@ void display()
 
   if (top == NULL)
   {
-    printf("\nStack is full...\n");
+    printf("\nStack is empty...\n");
   }
   else
   {
