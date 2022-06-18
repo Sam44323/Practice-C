@@ -1,5 +1,3 @@
-// sort using insertion, quick and radix sort
-
 #include <stdio.h>
 
 void print_array(int *arr, int n)
