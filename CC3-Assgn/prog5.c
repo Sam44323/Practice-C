@@ -69,6 +69,7 @@ int main()
       break;
     case 4:
       printf("Quit \n");
+      exit(0);
       break;
     default:
       printf("Wrong choice \n");
