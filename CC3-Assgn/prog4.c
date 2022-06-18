@@ -27,7 +27,7 @@ int isFull()
   return top == MAX - 1;
 }
 
-char peek()
+char look()
 {
   return stack[top];
 }
@@ -91,16 +91,16 @@ int infix_to_postfix(char *expression)
 
     else if (expression[i] == ')')
     {
-      while (!isEmpty() && peek() != '(')
+      while (!isEmpty() && look() != '(')
         expression[++j] = pop();
-      if (!isEmpty() && peek() != '(')
+      if (!isEmpty() && look() != '(')
         return -1;
       else
         pop();
     }
     else
     {
-      while (!isEmpty() && precedence(expression[i]) <= precedence(peek()))
+      while (!isEmpty() && precedence(expression[i]) <= precedence(look()))
         expression[++j] = pop();
       push(expression[i]);
     }
