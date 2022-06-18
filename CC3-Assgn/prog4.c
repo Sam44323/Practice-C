@@ -42,7 +42,7 @@ char pop()
   return (ch);
 }
 
-void push(char oper)
+void push(char token)
 {
   if (isFull())
     printf("Stack is full!");
@@ -50,7 +50,7 @@ void push(char oper)
   else
   {
     top++;
-    stack[top] = oper;
+    stack[top] = token;
   }
 }
 
