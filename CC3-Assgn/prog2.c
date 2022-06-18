@@ -75,7 +75,7 @@ void countSort(int arr[], int n, int exp)
   for (i = 0; i < n; i++)
     count[(arr[i] / exp) % 10]++;
 
-  for (i = 1; i < 10; i++)
+  for (i = 1; i < n; i++)
     count[i] += count[i - 1];
 
   for (i = n - 1; i >= 0; i--)
