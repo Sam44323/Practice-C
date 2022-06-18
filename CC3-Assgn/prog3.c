@@ -1,5 +1,3 @@
-// implement stack in array
-
 #include <stdio.h>
 #define MAX_SIZE 100
 int stack[MAX_SIZE], key = 0, n, pointer;
