@@ -35,7 +35,7 @@ int isEmpty()
 
 void push(int x)
 {
-  if (isFull() == 1)
+  if (isFull() == 0)
     stack[++pointer] = x;
 }
 
