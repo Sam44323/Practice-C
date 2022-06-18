@@ -70,7 +70,7 @@ int getMax(int arr[], int n)
 void countSort(int arr[], int n, int exp)
 {
   int output[n];
-  int i, count[10] = {0};
+  int i, count[n];
 
   for (i = 0; i < n; i++)
     count[(arr[i] / exp) % 10]++;
