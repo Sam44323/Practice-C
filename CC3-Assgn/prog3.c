@@ -13,13 +13,14 @@ void init()
   printf("Stack initialized\n");
 }
 
-void isFull()
+int isFull()
 {
   if (pointer == MAX_SIZE - 1)
   {
     printf("Stack is full\n");
-    return;
+    return 1;
   }
+  return 0;
 }
 
 int isEmpty()
@@ -34,8 +35,8 @@ int isEmpty()
 
 void push(int x)
 {
-  isFull();
-  stack[++pointer] = x;
+  if (isFull() == 1)
+    stack[++pointer] = x;
 }
 
 void pop()
