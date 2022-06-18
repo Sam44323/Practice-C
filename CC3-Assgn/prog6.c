@@ -61,7 +61,7 @@ void insert_pos()
   temp = (struct node *)malloc(sizeof(struct node));
   if (temp == NULL)
   {
-    printf("Out of Memory Space: \n");
+    printf("Underflow: \n");
     return;
   }
   printf("Enter the position for the new node to be inserted: \n");
