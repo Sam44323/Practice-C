@@ -76,10 +76,6 @@ void display(struct Node *node)
 int main()
 {
   struct Node *res = NULL, *a = NULL, *b = NULL;
-  int n, data;
-
-  printf("Enter the number of nodes for first-list: ");
-  scanf("%d", &n);
 
   push(&a, 5);
   push(&a, 2);
