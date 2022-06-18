@@ -14,7 +14,7 @@ void create()
   temp = (struct node *)malloc(sizeof(struct node));
   if (temp == NULL)
   {
-    printf("nOut of Memory Space:n");
+    printf("Underflow: \n");
     exit(0);
   }
   printf("Enter the data value for the node: \t");
