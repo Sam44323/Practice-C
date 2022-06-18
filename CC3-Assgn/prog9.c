@@ -9,7 +9,7 @@ struct node
 };
 
 struct node *create(struct node *);
-struct node *insert_s(struct node *, float, int);
+struct node *insert_data(struct node *, float, int);
 struct node *insert(struct node *, float, int);
 
 struct node *create(struct node *start)
@@ -24,11 +24,11 @@ struct node *create(struct node *start)
     scanf("%f", &co);
     printf("Enter exponent for term %d : ", i);
     scanf("%d", &ex);
-    start = insert_s(start, co, ex);
+    start = insert_data(start, co, ex);
   }
   return start;
 }
-struct node *insert_s(struct node *start, float co, int ex)
+struct node *insert_data(struct node *start, float co, int ex)
 {
   struct node *ptr, *tmp;
   tmp = (struct node *)malloc(sizeof(struct node));
@@ -144,7 +144,7 @@ void multiplication(struct node *p1, struct node *p2)
     p2 = p2_beg;
     while (p2 != NULL)
     {
-      start3 = insert_s(start3, p1->coef * p2->coef, p1->expo + p2->expo);
+      start3 = insert_data(start3, p1->coef * p2->coef, p1->expo + p2->expo);
       p2 = p2->link;
     }
     p1 = p1->link;
